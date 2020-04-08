@@ -556,7 +556,7 @@ li {
 }
 
 li:before {
-	background-image: url("images/star.png");
+	background-image: url("../img/star.png");
 	background-size: 20px 20px;
 	float: left;
 	display: inline-block;
