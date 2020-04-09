@@ -30,9 +30,10 @@
 					<span >to</span>
 					<span >the moment</span> &mdash;
 				</h4>
-				<h4 class="email"></h4>
+				<a href="mailto:gabriel.gazola@poli.ufrj.br"><h4 class="email"></h4></a>
 				<a class="btn" target="_blank" href="https://github.com/gabriel-milan">Github</a>
 				<a class="btn" target="_blank" href="static/docs/cv.pdf">Resumé</a>
+				<a class="btn" target="_blank" href="https://www.linkedin.com/in/gabriel-gazola-milan-705923124/">LinkedIn</a>
 			</div>
 
 			<img src="static/img/my-picture.jpeg"></img>
@@ -41,36 +42,20 @@
 		</div>
 
 
-		<h2>Academic Experience</h2>
+		<h2>Academic & Professional Experience</h2>
 		<div id="my-experiences">
 			<div class="horizontal-item">
 				<div>
 					<h1>Federal University<br>of Rio de Janeiro</h1>
-					<h4><span>Rio de Janeiro, Brazil</span> <br>(<span>Aug</span> 2019 &mdash; <span>today</span>)</h4>
+					<h4><span>Rio de Janeiro, Brazil</span></h4>
 					<h4 class="supervisor"><span>Supervisor</span>: Dr. José Manoel <br>de Seixas</h4>
-					<h4 class="funding"><span>Funded by CNPq</span></h4>
+					<h4 class="funding">(<span>Aug</span> 2019 &mdash; <span>today</span>)</h4>
 				</div>
 				<span class="separation-line"></span>
 				<h3><span class="position-name">[<span>Undergraduate Researcher</span>]</span> <span>
 					Currently part of the electron detection team on the high level trigger, using neural networks, for the ATLAS project, CERN.
 				</span></h3>
 			</div>
-			<div class="horizontal-item">
-				<div>
-					<h1>Federal University<br>of Rio de Janeiro</h1>
-					<h4><span>Rio de Janeiro, Brazil</span> <br>(<span>Aug</span> 2017 &mdash; <span>Dec</span> 2017)</h4>
-					<h4 class="supervisor"><span>Supervisor</span>: Dr. João Baptista de <br>Oliveira e Souza Filho</h4>
-					<h4 class="funding"><span>Funded by CNPq</span></h4>
-				</div>
-				<span class="separation-line"></span>
-				<h3><span class="position-name">[<span>Undergraduate Researcher</span>]</span> <span>
-					Worked on classification and novelty detection algorithms on passive sonar systems.
-				</span></h3>
-			</div>
-		</div>
-
-		<h2>Professional Experience</h2>
-		<div id="work-experiences">
 			<div class="horizontal-item">
 				<div>
 					<h1>LASPI / UFRJ</h1>
@@ -84,6 +69,18 @@
 			</div>
 			<div class="horizontal-item">
 				<div>
+					<h1>Federal University<br>of Rio de Janeiro</h1>
+					<h4><span>Rio de Janeiro, Brazil</span></h4>
+					<h4 class="supervisor"><span>Supervisor</span>: Dr. João Baptista de <br>Oliveira e Souza Filho</h4>
+					<h4 class="funding">(<span>Aug</span> 2017 &mdash; <span>Dec</span> 2017)</h4>
+				</div>
+				<span class="separation-line"></span>
+				<h3><span class="position-name">[<span>Undergraduate Researcher</span>]</span> <span>
+					Worked on classification and novelty detection algorithms on passive sonar systems.
+				</span></h3>
+			</div>
+			<div class="horizontal-item">
+				<div>
 					<h1>Minerva Náutica Team</h1>
 					<h4><span>Rio de Janeiro, Brazil</span> <br></h4>
 					<h4 class="funding">(<span>May</span> 2016 &mdash; <span>Dec</span> 2017)</h4>
@@ -93,6 +90,83 @@
 					Worked on building autonomous or RC boats. Joined the 11th International Robotic Sailing Competition in 2017 as the first
 					south hemisphere team to do it.
 				</span></h3>
+			</div>
+		</div>
+
+		<h2>Projects</h2>
+		<div id="my-projects" class="vertical-item-wrapper">
+			<div class="vertical-item">
+				<img class="thumbnail" src="static/img/lps.png"></img>
+				<h1>Computer Grid for LPS @ UFRJ</h1>
+				<h3>
+					Built a computer grid for the Signal Processing Laboratory (LPS) using Kubernetes,
+					a custom-built workload manager and a Python Package for managing jobs and datasets.
+				</h3>
+				<div style="margin: 0 auto; left: 50%; position: absolute; display: flex; bottom: 55px;">
+					<a class="btn" target="_blank" href="https://github.com/gabriel-milan/maestro">Check out Maestro</a>
+				</div>
+				<div class="btn-wrapper">
+					<a class="btn" target="_blank" href="https://github.com/jodafons/orchestra">Check out Orchestra</a>
+				</div>
+			</div>
+			<div class="vertical-item">
+				<img class="thumbnail" src="static/img/gloria.png"></img>
+				<h1>Autonomous Sailboat</h1>
+				<h3>
+					Developed the autonomous system of Gloria, a sailboat, for the 11th International
+					Robotic Sailing Competition with the first southern hemisphere team to join. Got 1st
+					place on the project category, 5th overall.
+				</h3>
+				<div class="btn-wrapper">
+					<a class="btn" target="_blank" href="https://www.sailbot.org/11th/">See the results!</a>
+				</div>
+			</div>
+			<div class="vertical-item">
+				<img class="thumbnail" src="static/img/otools.png"></img>
+				<h1>Framework for Online Systems</h1>
+				<h3>
+					Created a Cython framework for developing multithread online systems. It implements
+					features like shared memory, threads, watchdogs and triggers in a way that makes it
+					easy to use.
+				</h3>
+				<div class="btn-wrapper">
+					<a class="btn" target="_blank" href="https://github.com/gabriel-milan/otools">Check out OTools</a>
+				</div>
+			</div>
+		</div>
+		<div id="my-projects" class="vertical-item-wrapper">
+			<div class="vertical-item">
+				<img class="thumbnail" src="static/img/sousvide.png"></img>
+				<h1>Sous Vide</h1>
+				<h3>
+					Constructed a custom sous vide setup using ESP32 and cheap components. Began with
+					a Blynk application, but now developing a custom Android app for it.
+				</h3>
+				<div class="btn-wrapper">
+					<a class="btn" target="_blank" href="https://github.com/gabriel-milan/SousVide">Check out SousVide</a>
+				</div>
+			</div>
+			<div class="vertical-item">
+				<img class="thumbnail" src="static/img/mpu.png"></img>
+				<h1>Accelerometer & Gyroscope Library</h1>
+				<h3>
+					Wrote a library for MPU-6050 accelerometer and giroscope modules, using I²C
+					communication in C++. The implementation focus on performance and accuracy and
+					can be used by the main embedded systems platforms.
+				</h3>
+				<div class="btn-wrapper">
+					<a class="btn" target="_blank" href="https://platformio.org/lib/show/6180/TinyMPU6050">Check out TinyMPU6050</a>
+				</div>
+			</div>
+			<div class="vertical-item">
+				<img class="thumbnail" src="static/img/github.png"></img>
+				<h1><center>Want more?</center></h1>
+				<h3>
+					All the projects I can publicly share are on my GitHub, check it out!
+				</h3>
+				<div class="btn-wrapper">
+					<a class="btn" target="_blank" href="https://github.com/gabriel-milan/">Check my GitHub</a>
+				</div>
 			</div>
 		</div>
 
@@ -112,70 +186,14 @@
 					<li>C <span>/</span> C++ <span class="proficiency">(advanced)</span></li>
 					<li>Python <span class="proficiency">(advanced)</span></li>
 					<li>Git <span class="proficiency">(intermediate)</span></li>
+					<li>SQL databases <span class="proficiency">(intermediate)</span></li>
 					<li>TensorFlow <span class="proficiency">(intermediate)</span></li>
 					<li>HTML, CSS, JavaScript, jQuery <span class="proficiency">(intermediate)</span></li>
+					<li>NoSQL databases <span class="proficiency">(basic)</span></li>
 					<li>Julia <span class="proficiency">(basic)</span></li>
 				</ul>
 			</div>
 		</div>
-
-
-		<!-- <h2>Conquistas</h2>
-		<div id="my-achievements" class="vertical-item-wrapper">
-			<div class="vertical-item">
-				<img class="thumbnail" src="static/img/ufrj.png"></img>
-				<h1>1&ordm; Lugar Engenharia de Computação UFRJ</h1>
-				<h3>Classificado em 1&ordm; lugar no vestibular do curso com um total de 4035,60 pontos pelo ENEM 2014.</h3>
-			</div>
-			<div class="vertical-item">
-				<img class="thumbnail" src="static/img/enem.jpg"></img>
-				<h1>Nota 1000 na Redação do ENEM 2014</h1>
-				<h3>Escritor de uma das 250 redações, de um total de 6 milhões, que receberam nota 1000 no ENEM 2014.</h3>
-				<div class="btn-wrapper">
-					<a class="btn" target="_blank" href="http://oglobo.globo.com/sociedade/educacao/enem-e-vestibular/enem-2014-leia-exemplos-de-redacoes-nota-1000-15050154">Reportagem</a>
-				</div>
-			</div>
-			<div class="vertical-item">
-				<img class="thumbnail" src="static/img/highestgpa.jpg"></img>
-				<h1>Maior CRA Engenharia de Computação UFRJ</h1>
-				<h3>Graduado com o maior Coeficiente de Rendimento Acumulado entre meus colegas de Engenharia de Computação na primavera de 2019.</h3>
-				<div class="btn-wrapper">
-					<a class="btn" target="_blank" href="static/documents/metal_plaque_gpa.pdf">View Plaque</a>
-				</div>
-			</div>
-		</div>
-
-		<h2>Alguns Projetos</h2>
-		<div id="my-projects" class="vertical-item-wrapper">
-			<div class="vertical-item">
-				<img class="thumbnail" src="static/img/issuesmonitoring.png"></img>
-				<h1>Issues Monitoring</h1>
-				<h3>Sistema construído em equipe com técnicas de Eng. de Software para monitorar laboratórios da UFRJ. Envolve Arduinos, interface web, um servidor central e um parser para integração com outro
-					sistema.</h3>
-				<div class="btn-wrapper">
-					<a class="btn" target="_blank" href="https://github.com/ESEGroup/IssuesMonitoring">Github</a>
-				</div>
-			</div>
-			<div class="vertical-item">
-				<img class="thumbnail" src="static/img/socialcompassion.png"></img>
-				<h1>Social Compassion</h1>
-				<h3>Uma visualização interativa com dados de 222.180 tweets mostrando as reações dos usuários à guerra na Síria. Este projeto pessoal foi inspirado em uma exposição artística sobre visualização de
-					dados.</h3>
-				<div class="btn-wrapper">
-					<a class="btn" target="_blank" href="https://cemarciano.github.io/Social-Compassion/">Visitar</a>
-				</div>
-			</div>
-			<div class="vertical-item">
-				<img class="thumbnail" src="static/img/librasoffice.png"></img>
-				<h1>LibrasOffice & Outros</h1>
-				<h3>Ajudei a desenvolver o website do LibrasOffice, que incorpora linguagem de sinais brasileira (Libras) ao OpenOffice Calc. No momento, também estou envolvido na criação de software para
-					deficientes auditivos envolvendo visão computacional.</h3>
-				<div class="btn-wrapper">
-					<a class="btn" target="_blank" href="https://www.youtube.com/watch?v=ctGX3DEk3LA">LibrasOffice Video</a>
-				</div>
-			</div>
-		</div>
- -->
 
 	</div>
 
