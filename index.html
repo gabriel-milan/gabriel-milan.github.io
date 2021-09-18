@@ -1,211 +1,176 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-	<meta charset=utf-8>
-	<title>Gabriel Gazola Milan</title>
-	<link rel="stylesheet" href="static/css/index.css">
-	<link rel="stylesheet" href="static/css/responsive.css">
-	<script src="static/js/jquery-3.6.0.min.js"></script>
-	<script src="static/js/index.js"></script>
-	<!-- Stop favicon requests -->
-	<link rel="icon" href="data:,">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gabriel Gazola Milan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/magic-grid/dist/magic-grid.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/35741485?v=4" type="image/png">
 </head>
 
 <body>
+    <div id="loading">
+        <div id="spinner"></div>
+    </div>
+    <div id="profile">
+        <div id="profile_img" style="background: url(https://avatars.githubusercontent.com/u/35741485?v=4) center;"></div>
+        <div id="username"><span style="display:block;">Gabriel Gazola Milan</span><a href="https://github.com/gabriel-milan">@gabriel-milan</a></div>
+        <div id="userbio" style="display: block;">
+            <p>
+                Data Engineer @ SMTR/RJ<br> R&amp;D Engineer @ LASPI/UFRJ
+            </p>
+        </div>
+        <div id="about">
+            <span style="display:none;"><i class="fas fa-users"></i> &nbsp; null</span>
+            <span style="display:none;"><i class="fas fa-envelope"></i> &nbsp; null</span>
+            <span style="display:block;"><i class="fas fa-map-marker-alt"></i> &nbsp;&nbsp; Rio de Janeiro, Brazil</span>
+            <div class="socials">
+                <span style="display:block;"><a href="https://www.linkedin.com/in/gabriel-gazola-milan-705923124/" target="_blank" class="socials"><i class="fab fa-linkedin-in"></i></a></span>
+                <span style="display:block;"><a href="https://github.com/gabriel-milan" target="_blank" class="socials"><i class="fab fa-github"></i></a></span>
+            </div>
+        </div>
+    </div>
+    <div id="display">
+        <div id="work">
+            <h1>Open-source projects</h1>
+            <div class="projects" id="work_section">
+                <a href="https://github.com/gabriel-milan/sotaque-brasileiro" target="_blank">
+                    <section>
+                        <div class="section_title">sotaque-brasileiro</div>
+                        <div class="about_section">
+                            <span style="display:block;">Uma base de dados para estudo de regionalismos brasileiros através da voz.</span>
+                        </div>
+                        <div class="bottom_section">
+                            <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; Python</span>
+                            <!-- <span><i class="fas fa-star"></i>&nbsp; 2</span>
+                            <span><i class="fas fa-code-branch"></i>&nbsp; 0</span> -->
+                        </div>
+                    </section>
+                </a>
+                <a href="https://github.com/gabriel-milan/btrader" target="_blank">
+                    <section>
+                        <div class="section_title">btrader</div>
+                        <div class="about_section">
+                            <span style="display:block;">Triangle arbitrage trading bot for Binance. Written in Rust for superior performance</span>
+                        </div>
+                        <div class="bottom_section">
+                            <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; Rust</span>
+                            <!-- <span><i class="fas fa-star"></i>&nbsp; 89</span>
+                            <span><i class="fas fa-code-branch"></i>&nbsp; 25</span> -->
+                        </div>
+                    </section>
+                </a>
+                <a href="https://github.com/gabriel-milan/TinyMPU6050" target="_blank">
+                    <section>
+                        <div class="section_title">TinyMPU6050</div>
+                        <div class="about_section">
+                            <span style="display:block;">Tiny implementation for MPU6050 focusing on performance and accuracy</span>
+                        </div>
+                        <div class="bottom_section">
+                            <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; C++</span>
+                            <!-- <span><i class="fas fa-star"></i>&nbsp; 16</span>
+                            <span><i class="fas fa-code-branch"></i>&nbsp; 7</span> -->
+                        </div>
+                    </section>
+                </a>
+                <a href="https://github.com/gabriel-milan/esp32_ulp_hall_wakeup" target="_blank">
+                    <section>
+                        <div class="section_title">esp32_ulp_hall_wakeup</div>
+                        <div class="about_section">
+                            <span style="display:block;">A short simple code to wake ESP32 up using a hall sensor threshold</span>
+                        </div>
+                        <div class="bottom_section">
+                            <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; Assembly</span>
+                            <!-- <span><i class="fas fa-star"></i>&nbsp; 13</span>
+                            <span><i class="fas fa-code-branch"></i>&nbsp; 1</span> -->
+                        </div>
+                    </section>
+                </a>
+            </div>
+            <p style="text-align: center;">...and much more. Check them out on my
+                <a href="https://github.com/gabriel-milan" style="color: white;">GitHub profile</a>
+            </p>
+            <div id="forks" style="display:none;">
+                <h1>Forks.</h1>
+                <div class="projects" id="forks_section"></div>
+            </div>
+            <div id="blog_section">
+                <h1>Blog.</h1>
+                <div id="blogs"></div>
+            </div>
+            <div id="footer">
+                Generated with <a href="https://github.com/imfunniee/gitfolio" target="_blank">gitfolio</a>
+            </div>
+        </div>
+        <script type="text/javascript">
+            setTimeout(function() {
+                document.getElementById("loading").classList.add("animated");
+                document.getElementById("loading").classList.add("fadeOut");
+                setTimeout(function() {
+                    document.getElementById("loading").classList.remove("animated");
+                    document.getElementById("loading").classList.remove("fadeOut");
+                    document.getElementById("loading").style.display = "none";
+                }, 800);
+            }, 1500);
+            $.getJSON("blog.json", function(blog) {
+                blog = blog || [];
+                if (blog.length == 0) {
+                    return (document.getElementById("blog_section").style.display =
+                        "none");
+                }
+                for (var i = 0; i < blog.length; i++) {
+                    $("#blogs").append(`
+            <a href="./blog/${blog[i].url_title}/" target="_blank">
+                <section>
+                    <img src="./blog/${blog[i].url_title}/${blog[i].top_image}">
+                    <div class="blog_container">
+                        <div class="section_title">${blog[i].title}</div>
+                        <div class="about_section">
+                            ${blog[i].sub_title}
+                        </div>
+                    </div>
+                </section>
+            </a>
+            `);
+                }
+            }).fail(function() {
+                return (document.getElementById("blog_section").style.display = "none");
+            });
+        </script>
 
+        <script>
+            const magicProjectsGrid = new MagicGrid({
+                container: "#work_section",
+                animate: false,
+                gutter: 30, // default gutter size
+                static: true,
+                useMin: false,
+                maxColumns: 2,
+                useTransform: true
+            });
 
-	<div id="white-page">
+            const magicForksGrid = new MagicGrid({
+                container: "#forks_section",
+                animate: false,
+                gutter: 30, // default gutter size
+                static: true,
+                useMin: false,
+                maxColumns: 2,
+                useTransform: true
+            });
 
+            $("document").ready(() => {
+                magicProjectsGrid.listen();
+                magicForksGrid.listen();
+            });
+        </script>
 
-		<div id="basic-info">
-
-			<div>
-				<h1>Gabriel Gazola Milan</h1>
-				<h3 class="subtitle">Electronics and Computer Engineering Student</h3>
-				<h4>Federal University of Rio de Janeiro &mdash; UFRJ &mdash; Brazil</h4>
-				<h4>
-					<span>Apr</span>
-					2016
-					<span>to</span>
-					<span>the moment</span> &mdash;
-				</h4>
-				<a href="mailto:gabriel.gazola@poli.ufrj.br">
-					<h4 class="email"></h4>
-				</a>
-				<a class="btn" target="_blank" href="https://github.com/gabriel-milan">Github</a>
-				<a class="btn" target="_blank" href="static/docs/cv.pdf">Resumé</a>
-				<a class="btn" target="_blank"
-					href="https://www.linkedin.com/in/gabriel-gazola-milan-705923124/">LinkedIn</a>
-			</div>
-
-			<img src="static/img/my-picture.jpeg"></img>
-
-
-		</div>
-
-
-		<h2>Academic & Professional Experience</h2>
-		<div id="my-experiences">
-			<div class="horizontal-item">
-				<div>
-					<h1>Federal University<br>of Rio de Janeiro</h1>
-					<h4><span>Rio de Janeiro, Brazil</span></h4>
-					<h4 class="supervisor"><span>Supervisor</span>: Dr. José Manoel <br>de Seixas</h4>
-					<h4 class="funding">(<span>Aug</span> 2019 &mdash; <span>today</span>)</h4>
-				</div>
-				<span class="separation-line"></span>
-				<h3><span class="position-name">[<span>Undergraduate Researcher</span>]</span> <span>
-						Currently part of the electron detection team on the high level trigger, using neural networks,
-						for the ATLAS project, CERN.
-					</span></h3>
-			</div>
-			<div class="horizontal-item">
-				<div>
-					<h1>LASPI / UFRJ</h1>
-					<h4><span>Rio de Janeiro, Brazil</span> <br></h4>
-					<h4 class="funding">(<span>Jan</span> 2018 &mdash; <span>today</span>)</h4>
-				</div>
-				<span class="separation-line"></span>
-				<h3><span class="position-name">[<span>R&D Fellow</span>]</span> <span>
-						Currently working on multiple projects, developing embedded systems, multithread online systems,
-						web and mobile apps.
-					</span></h3>
-			</div>
-			<div class="horizontal-item">
-				<div>
-					<h1>Federal University<br>of Rio de Janeiro</h1>
-					<h4><span>Rio de Janeiro, Brazil</span></h4>
-					<h4 class="supervisor"><span>Supervisor</span>: Dr. João Baptista de <br>Oliveira e Souza Filho</h4>
-					<h4 class="funding">(<span>Aug</span> 2017 &mdash; <span>Dec</span> 2017)</h4>
-				</div>
-				<span class="separation-line"></span>
-				<h3><span class="position-name">[<span>Undergraduate Researcher</span>]</span> <span>
-						Worked on classification and novelty detection algorithms on passive sonar systems.
-					</span></h3>
-			</div>
-			<div class="horizontal-item">
-				<div>
-					<h1>Minerva Náutica Team</h1>
-					<h4><span>Rio de Janeiro, Brazil</span> <br></h4>
-					<h4 class="funding">(<span>May</span> 2016 &mdash; <span>Dec</span> 2017)</h4>
-				</div>
-				<span class="separation-line"></span>
-				<h3><span class="position-name">[<span>Electronics and Computer Manager</span>]</span> <span>
-						Worked on building autonomous or RC boats. Joined the 11th International Robotic Sailing
-						Competition in 2017 as the first
-						south hemisphere team to do it.
-					</span></h3>
-			</div>
-		</div>
-
-		<h2>Projects</h2>
-		<div id="my-projects" class="vertical-item-wrapper">
-			<div class="vertical-item">
-				<img class="thumbnail" src="static/img/lps.png"></img>
-				<h1>Computer Grid for LPS @ UFRJ</h1>
-				<h3>
-					Built a computer grid for the Signal Processing Laboratory (LPS) using Kubernetes,
-					a custom-built workload manager and a Python Package for managing jobs and datasets.
-				</h3>
-				<div style="margin: 0 auto; left: 50%; position: absolute; display: flex; bottom: 55px;">
-					<a class="btn" target="_blank" href="https://github.com/gabriel-milan/maestro">Check out Maestro</a>
-				</div>
-				<div class="btn-wrapper">
-					<a class="btn" target="_blank" href="https://github.com/jodafons/orchestra">Check out Orchestra</a>
-				</div>
-			</div>
-			<div class="vertical-item">
-				<img class="thumbnail" src="static/img/gloria.png"></img>
-				<h1>Autonomous Sailboat</h1>
-				<h3>
-					Developed the autonomous system of Gloria, a sailboat, for the 11th International
-					Robotic Sailing Competition with the first southern hemisphere team to join. Got 1st
-					place on the project category, 5th overall.
-				</h3>
-				<div class="btn-wrapper">
-					<a class="btn" target="_blank" href="https://www.sailbot.org/11th/">See the results!</a>
-				</div>
-			</div>
-			<div class="vertical-item">
-				<img class="thumbnail" src="static/img/otools.png"></img>
-				<h1>Framework for Online Systems</h1>
-				<h3>
-					Created a Cython framework for developing multithread online systems. It implements
-					features like shared memory, threads, watchdogs and triggers in a way that makes it
-					easy to use.
-				</h3>
-				<div class="btn-wrapper">
-					<a class="btn" target="_blank" href="https://github.com/gabriel-milan/otools">Check out OTools</a>
-				</div>
-			</div>
-		</div>
-		<div id="my-projects" class="vertical-item-wrapper">
-			<div class="vertical-item">
-				<img class="thumbnail" src="static/img/sousvide.png"></img>
-				<h1>Sous Vide</h1>
-				<h3>
-					Constructed a custom sous vide setup using ESP32 and cost effective components. Began with
-					a Blynk application, but now developing a custom Android app for it.
-				</h3>
-				<div class="btn-wrapper">
-					<a class="btn" target="_blank" href="https://github.com/gabriel-milan/SousVide">Check out
-						SousVide</a>
-				</div>
-			</div>
-			<div class="vertical-item">
-				<img class="thumbnail" src="static/img/mpu.png"></img>
-				<h1>Accelerometer & Gyroscope Library</h1>
-				<h3>
-					Wrote a library for MPU-6050 accelerometer and giroscope modules, using I²C
-					communication in C++. The implementation focus on performance and accuracy and
-					can be used by the main embedded systems platforms.
-				</h3>
-				<div class="btn-wrapper">
-					<a class="btn" target="_blank" href="https://platformio.org/lib/show/6180/TinyMPU6050">Check out
-						TinyMPU6050</a>
-				</div>
-			</div>
-			<div class="vertical-item">
-				<img class="thumbnail" src="static/img/github.png"></img>
-				<h1>
-					<center>Want more?</center>
-				</h1>
-				<h3>
-					All the projects I can publicly share are on my GitHub, check it out!
-				</h3>
-				<div class="btn-wrapper">
-					<a class="btn" target="_blank" href="https://github.com/gabriel-milan/">Check my GitHub</a>
-				</div>
-			</div>
-		</div>
-
-		<h2>Languages & Skills</h2>
-		<div id="my-languages">
-			<div id="naturals">
-				<h1>Natural</h1>
-				<ul>
-					<li><span>Potuguese</span> <span class="proficiency">(fluent)</span></li>
-					<li><span>English</span> <span class="proficiency">(fluent)</span></li>
-					<li><span>Spanish</span> <span class="proficiency">(basic)</span></li>
-				</ul>
-			</div>
-			<div id="programming">
-				<h1>Programming & Softwares</h1>
-				<ul>
-					<li>C <span>/</span> C++ <span class="proficiency">(advanced)</span></li>
-					<li>Python <span class="proficiency">(advanced)</span></li>
-					<li>Git <span class="proficiency">(intermediate)</span></li>
-					<li>SQL databases <span class="proficiency">(intermediate)</span></li>
-					<li>TensorFlow <span class="proficiency">(intermediate)</span></li>
-					<li>HTML, CSS, JavaScript, jQuery <span class="proficiency">(intermediate)</span></li>
-					<li>NoSQL databases <span class="proficiency">(basic)</span></li>
-					<li>Julia <span class="proficiency">(basic)</span></li>
-				</ul>
-			</div>
-		</div>
-
-	</div>
 
 </body>
 
